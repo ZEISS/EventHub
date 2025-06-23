@@ -12,7 +12,7 @@ CZ EventHub
 * **Open standards**. The system is based on open standards like [NATS.io](https://nats.io/) and [Knative Eventing](https://knative.dev/docs/eventing/).
 
 ## Design Patterns
-![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## Installation
 Either on local kubernetes with kind or cloud-based like AKS
