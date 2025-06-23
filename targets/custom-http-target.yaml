@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: custom-http-target
+  namespace: knative-eventing
+spec:
+  template:
+    metadata:
+      labels:
+        app: custom-http-target
+    spec:
+      containers:
+        - image: ghcr.io/zeiss/eventhub/custom-http-service:2.0.0
+          name: custom-http-target
+          env:
+            - name: K_SINK
+              value: https://webhook.site/2edfac18-d272-4d4f-bd39-c0be9866d692

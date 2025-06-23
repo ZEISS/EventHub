@@ -1,0 +1,15 @@
+apiVersion: sources.knative.dev/v1
+kind: SinkBinding
+metadata:
+  name: bind-http-source
+  namespace: knative-eventing
+spec:
+  subject:
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    name: custom-http-source
+  sink:
+    ref:
+      apiVersion: messaging.knative.dev/v1alpha1
+      kind: NatsJetStreamChannel
+      name: channel-defaults
