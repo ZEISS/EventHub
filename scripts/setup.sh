@@ -31,5 +31,5 @@ kubectl apply -f https://github.com/knative-extensions/eventing-natss/releases/d
 kubectl patch configmap/config-domain \
       --namespace knative-serving \
       --type merge \
-      --patch '{"data":{"*.eventhub.developer.zeiss.com":""}}'
+      --patch '{"data":{"eventhub.developer.zeiss.com":""}}'
 
